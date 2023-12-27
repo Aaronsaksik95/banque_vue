@@ -111,7 +111,9 @@ const submitWithdraw = async (data: FormFields) => {
         'Content-Type': 'application/json',
       }
     })
+    getAllAccounts()
     showPopup.value = false
+    router.push(`/myAccount/${accountId}`)
     if (response.data.response) {
       toast.success(response.data.message);
     }
@@ -138,7 +140,9 @@ const submitTransfer = async (data: FormFields) => {
         'Content-Type': 'application/json',
       }
     })
+    getAllAccounts()
     showPopup.value = false
+    router.push(`/myAccount/${accountId}`)
     if (response.data.response) {
       toast.success(response.data.message);
     }
